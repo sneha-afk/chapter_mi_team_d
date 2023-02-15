@@ -42,11 +42,9 @@ export const EventList = ({ events, emptyText, title }: Props) => {
               <GridItem>
                 <HStack>
                   <LinkButton href={`/dashboard/events/${id}`}>
-                    {'Dashboard'}
+                    {'Event dashboard'}
                   </LinkButton>
-                  <LinkButton href={`/events/${id}`}>
-                    {'Public Page'}
-                  </LinkButton>
+                  <LinkButton href={`/events/${id}`}>{'Event page'}</LinkButton>
                 </HStack>
               </GridItem>
 
