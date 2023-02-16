@@ -28,6 +28,7 @@ export const EventList = ({ events, emptyText, title }: Props) => {
           {events.map(({ canceled, id, invite_only, name }) => (
             <Flex justifyContent="space-between" key={id}>
               <LinkButton href={`/dashboard/events/${id}`}>{name}</LinkButton>
+              MERGE CONFLICT TEST
               <Flex marginTop="1" gap="1em">
                 {invite_only && (
                   <Tag
