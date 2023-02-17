@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 
-import { LockIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { LockIcon } from '@chakra-ui/icons';
 
 interface Event {
   canceled: boolean;
@@ -38,9 +38,7 @@ export const EventList = ({ events, emptyText, title }: Props) => {
           {events.map(({ canceled, id, invite_only, name }) => (
             <Flex justifyContent="space-between" key={id}>
               <Menu>
-                <MenuButton as={Button} rightIcon={<HamburgerIcon />}>
-                  {name}
-                </MenuButton>
+                <MenuButton as={Button}>{name}</MenuButton>
                 <MenuList minWidth="200">
                   <MenuItem as="a" href={`/dashboard/events/${id}`}>
                     Event dashboard
